@@ -1,5 +1,6 @@
 FROM maven
 WORKDIR /Java
+COPY . .
 RUN mvn clean package
 FROM tomcat
 WORKDIR /usr/local/tomcat/webapps/
